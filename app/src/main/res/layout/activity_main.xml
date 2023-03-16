@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f0fc"
+    android:backgroundTint="#f8f0fc"
+    android:backgroundTintMode="src_atop"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/result_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press a button to show result!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.675" />
+
+    <Button
+        android:id="@+id/multiply_btn"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#e6cbf5"
+        android:gravity="center"
+        android:onClick="multiply_number"
+        android:text="x"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/division_button"
+        app:layout_constraintTop_toBottomOf="@+id/second_input" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#e6cbf5"
+        android:onClick="add_numbers"
+        android:text="+"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/minus_button"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_input" />
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#e6cbf5"
+        android:onClick="subtract_number"
+        android:text="-"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/multiply_btn"
+        app:layout_constraintTop_toBottomOf="@+id/second_input" />
+
+    <Button
+        android:id="@+id/division_button"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="68dp"
+        android:backgroundTint="#e6cbf5"
+        android:onClick="divide_number"
+        android:text="/"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/second_input" />
+
+    <EditText
+        android:id="@+id/first_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#A8A8A8"
+        android:ems="10"
+        android:hint="Anna numero"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/second_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <EditText
+        android:id="@+id/second_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="248dp"
+        android:backgroundTint="#A8A8A8"
+        android:ems="10"
+        android:hint="Anna toinen numero"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/result_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="clear_Numbers"
+        android:text="Clear"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#A8A8A8"
+        app:layout_constraintBottom_toTopOf="@+id/result_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_input"
+        app:layout_constraintVertical_bias="0.04" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
